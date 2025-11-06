@@ -79,6 +79,28 @@ Below is an overview of the architecture for the Glamour Salon Voice AI Assistan
 
 This architecture enables a seamless flow from spoken customer queries to intelligent voice responses with human-in-the-loop oversight, ensuring accurate, scalable, and easily maintainable customer support automation.
 
+## Database Schema
+
+### Help Requests Table (`help_requests`)
+
+| Attribute         | Type    | Description                                 |
+|-------------------|---------|---------------------------------------------|
+| id                | String  | Unique identifier (UUID) for the request    |
+| customer_id       | String  | Unique customer/caller/session identifier   |
+| question          | String  | Customer’s original question                |
+| status            | String  | "pending", "resolved", "unresolved"         |
+| created_at        | Number  | Timestamp (Unix) when created               |
+| supervisor_answer | String  | Answer given by supervisor (if resolved)    |
+
+### Knowledge Base Table (`knowledge_base`)
+
+| Attribute | Type   | Description                        |
+|-----------|--------|------------------------------------|
+| id        | String | Unique KB entry ID (UUID or hash)  |
+| question  | String | The normalized (canonical) question|
+| answer    | String | The answer text                    |
+
+
 ## Images of UI
 - Supervisor Dashboard
 <img src="dashboard_Images/dashbrd.png" alt="Dashboard" width="800" height="400"/>
