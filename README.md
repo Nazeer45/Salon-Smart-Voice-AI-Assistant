@@ -81,16 +81,16 @@ This architecture enables a seamless flow from spoken customer queries to intell
 
 ## Images of UI
 - Supervisor Dashboard
-<img src="dashboard_Images/dashbrd.png" alt="Dashboard" width="800" height="200"/>
+<img src="dashboard_Images/dashbrd.png" alt="Dashboard" width="800" height="400"/>
 
 - All Requests
-<img src="dashboard_Images/all_req.png" alt="All Requests" width="800" height="200"/>
+<img src="dashboard_Images/all_req.png" alt="All Requests" width="800" height="400"/>
 
 - Pending Help Requests
-<img src="dashboard_Images/pend_req.png" alt="Pending Help Requests" width="800" height="200"/>
+<img src="dashboard_Images/pend_req.png" alt="Pending Help Requests" width="800" height="400"/>
 
 - Resolved Requests
-<img src="dashboard_Images/resol_req.png" alt="Resolved Requests" width="800" height="200"/>
+<img src="dashboard_Images/resol_req.png" alt="Resolved Requests" width="800" height="400"/>
 
 
 ## Setup & Installation
