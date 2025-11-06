@@ -1,0 +1,45 @@
+# Environment / secrets
+.env
+.env.* 
+
+# Python virtual environments
+vir_assist_env/
+venv/
+.venv/
+env/
+ENV/
+
+# Byte-compiled / caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Packaging / build
+build/
+dist/
+*.egg-info/
+
+# IDEs / editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+.DS_Store
+Thumbs.db
+
+
+# Logs and runtime files
+*.log
+*.sqlite3
+
+# AWS credentials (local)
+.aws/

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Help Requests</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Dashboard</a> |
+        <a href="/dashboard/help_requests">Pending Help Requests</a> |
+        <a href="/dashboard/knowledge_base">Knowledge Base</a>
+    </nav>
+    <div class="container">
+        <h1 class="text-center">All Help Requests</h1>
+
+        <h2>Pending</h2>
+        <ul>
+            {% for req in pending %}
+                <li>
+                    <strong>ID:</strong> {{ req.id }}<br>
+                    <strong>Customer:</strong> {{ req.customer_id }}<br>
+                    <strong>Question:</strong> {{ req.question }}<br>
+                </li>
+            {% else %}
+                <li>No pending requests.</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Resolved</h2>
+        <ul>
+            {% for req in resolved %}
+                <li>
+                    <strong>ID:</strong> {{ req.id }}<br>
+                    <strong>Customer:</strong> {{ req.customer_id }}<br>
+                    <strong>Question:</strong> {{ req.question }}<br>
+                    <strong>Answer:</strong> {{ req.supervisor_answer }}<br>
+                </li>
+            {% else %}
+                <li>No resolved requests.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

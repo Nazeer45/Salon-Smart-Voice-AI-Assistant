@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pending Help Requests</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/">Dashboard</a> |
+      <a href="/dashboard/all_requests">All Requests</a> |
+      <a href="/dashboard/knowledge_base">Knowledge Base</a>
+    </nav>
+    <hr />
+    <div class="container">
+      <h1 class="text-center">Pending Help Requests</h1>
+      {% if help_requests %}
+      <ul>
+        {% for req in help_requests %}
+        <li>
+          <strong>ID:</strong> {{ req.id }}<br />
+          <strong>Customer:</strong> {{ req.customer_id }}<br />
+          <strong>Question:</strong> {{ req.question }}<br />
+          <form action="/help_requests/{{ req.id }}/resolve" method="post">
+            <input type="text" name="answer" placeholder="Supervisor answer" />
+            <button type="submit">Resolve & Learn</button>
+          </form>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p class="text-center">No pending help requests found.</p>
+      {% endif %}
+    </div>
+  </body>
+</html>

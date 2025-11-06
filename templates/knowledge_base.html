@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Knowledge Base</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Dashboard</a> |
+        <a href="/dashboard/all_requests">All Requests</a> |
+        <a href="/dashboard/help_requests">Pending Help Requests</a>
+    </nav>
+    <hr>
+    <div class="container">
+        <h1 class="text-center">Knowledge Base Entries</h1>
+        {% if entries %}
+        <ul>
+            {% for entry in entries %}
+                <li>
+                    <strong>ID:</strong> {{ entry.id }}<br>
+                    <strong>Question:</strong> {{ entry.question }}<br>
+                    <strong>Answer:</strong> {{ entry.answer }}<br>
+                    <form action="/knowledge_base/delete/{{ entry.id }}" method="post" onsubmit="return confirm('Are you sure you want to delete this entry?');">
+                    <button type="submit">Delete</button>
+                </form>
+                </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            <p class="text-center">No knowledge base entries found. Entries will appear here when help requests are resolved.</p>
+        {% endif %}
+    <div>
+</body>
+</html>
