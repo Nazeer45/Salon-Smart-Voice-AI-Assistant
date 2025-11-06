@@ -89,7 +89,7 @@ This architecture enables a seamless flow from spoken customer queries to intell
 - Pending Help Requests
 <img src="dashboard_Images/pend_req.png" alt="Pending Help Requests" width="800" height="400"/>
 
-- Resolved Requests
+- Resolved Requests & Added In Knowledge_Base
 <img src="dashboard_Images/resol_req.png" alt="Resolved Requests" width="800" height="400"/>
 
 
@@ -149,7 +149,7 @@ This architecture enables a seamless flow from spoken customer queries to intell
     uvicorn app.main:app --reload
     
     
-- The backend API and supervisor dashboard are accessible at: `http://localhost:8000/`
+- The backend API and supervisor dashboard are accessible at: `http://localhost:8000/` (if server is running at 8000 port)
 
 ### Start the AI Voice Agent in CLI
     python ai_agent/agent.py console
@@ -174,8 +174,6 @@ This architecture enables a seamless flow from spoken customer queries to intell
 
 This project is licensed under the MIT License.
 
-
-
-*Thank you for using the Salon Smart Voice AI Assistant project!*  
+*Thank you for using the Salon Smart Voice AI Assistant!*  
 
 Feel free to contribute or customize the solution to your needs.
