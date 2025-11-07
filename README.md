@@ -115,7 +115,7 @@ This architecture enables a seamless flow from spoken customer queries to intell
 <img src="dashboard_Images/resol_req.png" alt="Resolved Requests" width="800" height="400"/>
 
 ## Demo Video
-[Download Demo Video](demo_video/Demo_Video.mp4)
+[Download Demo Video](demo_video/)
 
 
 ## Setup & Installation
